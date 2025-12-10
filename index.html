@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PASSO A PASSO — SALESFORCE (Material)</title>
+  <style>
+    :root {
+      --bg:#f7fafc;
+      --card:#fff;
+      --accent:#0a5fbd;
+      --muted:#556676;
+      --glass:rgba(10,95,189,0.06);
+    }
+
+    * { box-sizing:border-box; }
+
+    body {
+      font-family:Inter,system-ui,-apple-system,'Segoe UI',Roboto,Arial;
+      margin:0;
+      background:linear-gradient(180deg,var(--bg),#eef6ff);
+      color:#112233;
+    }
+
+    .container {
+      max-width:900px;
+      margin:36px auto;
+      padding:24px;
+    }
+
+    header {
+      display:flex;
+      align-items:center;
+      gap:16px;
+      flex-wrap:wrap;
+    }
+
+    .logo {
+      width:64px;
+      height:64px;
+      border-radius:8px;
+      background:var(--accent);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color:white;
+      font-weight:700;
+      font-size:20px;
+    }
+
+    h1 { margin:0; font-size:20px; }
+    p.lead { margin:6px 0 18px; color:var(--muted); }
+
+    .card {
+      background:var(--card);
+      padding:18px;
+      border-radius:12px;
+      box-shadow:0 6px 18px rgba(16,24,40,0.06);
+      border:1px solid rgba(16,24,40,0.04);
+      margin-bottom:25px;
+    }
+
+    .img-grid {
+      display:grid;
+      grid-template-columns:1fr;
+      gap:12px;
+    }
+
+    /* imagens em 2 colunas no tablet */
+    @media (min-width:600px) {
+      .img-grid { grid-template-columns:repeat(2,1fr); }
+    }
+
+    /* imagens em 3 colunas no desktop */
+    @media (min-width:900px) {
+      .img-grid { grid-template-columns:repeat(3,1fr); }
+    }
+
+    .img-placeholder {
+      background:var(--glass);
+      border-radius:8px;
+      padding:10px;
+      min-height:120px;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+      border:1px dashed rgba(10,95,189,0.12);
+      overflow:hidden;
+    }
+
+    .img-placeholder img {
+      width:100%;
+      border-radius:6px;
+      display:block;
+    }
+
+    .caption {
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    .steps {
+      background:linear-gradient(180deg,#fff,#f7fbff);
+      padding:12px;
+      border-radius:8px;
+      border:1px solid rgba(10,95,189,0.04);
+      margin-top:12px;
+    }
+
+    .steps ol, .steps ul {
+      margin:6px 0;
+      padding-left:18px;
+      color:#0f1724;
+    }
+
+    hr {
+      margin:28px 0;
+      border:none;
+      border-top:1px solid #dde7f5;
+    }
+
+    footer {
+      background:#0a5fbd;
+      color:white;
+      padding:22px;
+      margin-top:40px;
+      text-align:center;
+      font-family:Inter,Arial;
+      border-radius:6px 6px 0 0;
+    }
+
+    footer a {
+      color:white;
+      font-weight:600;
+      text-decoration:underline;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+
+    <header>
+      <div class="logo">SF</div>
+      <div>
+        <h1>Passo a passo — Fluxos pelo Salesforce</h1>
+        <p class="lead">Material em HTML com texto e imagens organizadas verticalmente.</p>
+      </div>
+    </header>
+
+    
+    <!-- CARD PRINCIPAL -->
+    <div class="card">
+      <h2>Fluxo Geral — 1 imagem por passo</h2>
+
+      <div class="img-grid">
+        <div class="img-placeholder">
+          <img src="imagens/1.jpg">
+          <div class="caption">1 — Selecionar "Relacionamentos".</div>
+        </div>
+
+        <div class="img-placeholder">
+          <img src="imagens/2.jpg">
+          <div class="caption">2 — Selecionar a instância com problema.</div>
+        </div>
+
+        <div class="img-placeholder">
+          <img src="imagens/3.jpg">
+          <div class="caption">3 — Solicitação → Suporte Técnico.</div>
+        </div>
+
+        <div class="img-placeholder">
+          <img src="imagens/4.jpg">
+          <div class="caption">4 — Inserir senha redecorp + 80.</div>
+        </div>
+
+        <div class="img-placeholder">
+          <img src="imagens/5.jpg">
+          <div class="caption">5 — Se a pergunta não carregar, envie a resposta.</div>
+        </div>
+
+        <div class="img-placeholder">
+          <img src="imagens/6.jpg">
+          <div class="caption">6 — Clique no círculo azul para voltar.</div>
+        </div>
+      </div>
+
+      <div class="steps">
+        <strong>Passo a passo (texto):</strong>
+        <ol>
+          <li>Acesse “Relacionamentos”.</li>
+          <li>Selecione a instância correta.</li>
+          <li>Abra o fluxo: Solicitação → Suporte Técnico.</li>
+          <li>Digite a senha redecorp + código 80.</li>
+          <li>Se a pergunta inicial não carregar, envie a resposta.</li>
+          <li>Use o círculo azul para voltar à pergunta, se necessário.</li>
+          <li>Finalize registrando a resolutividade.</li>
+        </ol>
+      </div>
+    </div>
+
+
+    <!-- REPARO DE BANDA LARGA -->
+    <div class="card">
+      <h2>Reparo de Banda Larga — 3 imagens</h2>
+      <p><strong>Fluxo:</strong> Solicitação → Suporte Técnico → Reparo Banda Larga</p>
+
+      <div class="img-grid">
+        <div class="img-placeholder">
+          <img src="imagens/7.jpg">
+          <div class="caption">Abertura do fluxo.</div>
+        </div>
+
+        <div class="img-placeholder">
+          <img src="imagens/8.jpg">
+          <div class="caption">Sintomas: LEDs piscando, vermelho parado, azul piscando.</div>
+        </div>
+
+        <div class="img-placeholder">
+          <img src="imagens/9.jpg">
+          <div class="caption">Diagnóstico básico.</div>
+        </div>
+      </div>
+
+      <div class="steps">
+        <strong>Quando usar:</strong>
+        <ul>
+          <li>Cliente sem navegação;</li>
+          <li>LED vermelho parado (sem sincronismo);</li>
+          <li>LED piscando em azul;</li>
+          <li>Todos os LEDs piscando.</li>
+        </ul>
+      </div>
+    </div>
+
+
+    <!-- REPARO LINHA -->
+    <div class="card">
+      <h2>Reparos Linha — 3 imagens</h2>
+      <p><strong>Fluxo:</strong> Solicitação → Suporte Técnico → Reparos Linha</p>
+
+      <div class="img-grid">
+        <div class="img-placeholder">
+          <img src="imagens/10.jpg">
+          <div class="caption">Abrir fluxo Reparos Linha.</div>
+        </div>
+
+        <div class="img-placeholder">
+          <img src="imagens/11.jpg">
+          <div class="caption">Verificação de ruído e tom.</div>
+        </div>
+
+        <div class="img-placeholder">
+          <img src="imagens/12.jpg">
+          <div class="caption">Ações finais.</div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- REPARO TV -->
+    <div class="card">
+      <h2>Reparo TV — 3 imagens</h2>
+      <p><strong>Fluxo:</strong> Solicitação → Suporte Técnico → Reparo TV</p>
+
+      <div class="img-grid">
+        <div class="img-placeholder">
+          <img src="imagens/13.jpg">
+          <div class="caption">Abrir fluxo TV.</div>
+        </div>
+
+        <div class="img-placeholder">
+          <img src="imagens/14.jpg">
+          <div class="caption">Verificar banda larga antes.</div>
+        </div>
+
+        <div class="img-placeholder">
+          <img src="imagens/15.jpg">
+          <div class="caption">Diagnóstico e registro.</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    <h3>Serviços Profissionais</h3>
+    <p>Criação de materiais operacionais, fluxos, manuais e treinamentos em HTML, CSS, PDF, Word e PowerPoint.</p>
+    <p>Consultoria em organização de processos e design instrucional.</p>
+
+    <div style="margin-top:10px;font-size:14px;">
+      Entre em contato para projetos personalizados.<br>
+      <a href="https://wa.me/71992976472" target="_blank">📱 WhatsApp</a>
+    </div>
+  </footer>
+
+</body>
+</html>
